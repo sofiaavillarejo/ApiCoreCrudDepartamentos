@@ -45,6 +45,7 @@ namespace ApiCoreCrudDepartamentos.Controllers
             return Ok();
         }
 
+        [HttpPut]
         public async Task<ActionResult> UpdateDepartamento(Departamento dept)
         {
             await this.repo.UpdateDepartamento(dept.IdDepartamento, dept.Nombre, dept.Localidad);
@@ -55,6 +56,7 @@ namespace ApiCoreCrudDepartamentos.Controllers
         //EJ -> POST CON PARAMETROS
 
         [HttpPost]
+        //CUANDO TENGA POCAS PROPIEDADES, SINO NO MERECE LA PENA
         [Route("[action]/{id}/{nombre}/{localidad}")]
         public async Task<ActionResult> PostDepartamento(int id, string nombre, string localidad)
         {
