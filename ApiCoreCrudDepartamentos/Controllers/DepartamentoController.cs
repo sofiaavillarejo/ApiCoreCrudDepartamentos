@@ -7,6 +7,8 @@ namespace ApiCoreCrudDepartamentos.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
+    //LA RUTA DE L AAPI API/DEPARTAMENTO -> LO COGE DE AQUI DEL NOMBRE DEL CONTROLLER
     public class DepartamentoController : ControllerBase
     {
         private RepositoryDepartamentos repo;
